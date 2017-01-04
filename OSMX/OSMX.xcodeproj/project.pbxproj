@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1423798C1E18A9DD0073EABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423798B1E18A9DD0073EABA /* AppDelegate.swift */; };
-		1423798E1E18A9DD0073EABA /* MapboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423798D1E18A9DD0073EABA /* MapboxViewController.swift */; };
 		142379931E18A9DD0073EABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379911E18A9DD0073EABA /* Main.storyboard */; };
 		142379951E18A9DD0073EABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142379941E18A9DD0073EABA /* Assets.xcassets */; };
 		142379981E18A9DD0073EABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379961E18A9DD0073EABA /* LaunchScreen.storyboard */; };
-		149CD4E51E18ADE000DE258B /* Mapbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CD4E41E18ADE000DE258B /* Mapbox.swift */; };
+		14893C8F1E1D3AB3006001D3 /* Mapbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8D1E1D3AB3006001D3 /* Mapbox.swift */; };
+		14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */; };
+		4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148841E1CC36700DCD68B /* MapKitViewController.swift */; };
+		4C2148871E1CCE7C00DCD68B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148861E1CCE7C00DCD68B /* Constants.swift */; };
 		65FB831858B6A68910224AA4 /* Pods_OSMX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA630DCAF813C554B8FD57A2 /* Pods_OSMX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		142379881E18A9DD0073EABA /* OSMX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1423798B1E18A9DD0073EABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1423798D1E18A9DD0073EABA /* MapboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxViewController.swift; sourceTree = "<group>"; };
 		142379921E18A9DD0073EABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		142379941E18A9DD0073EABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		142379971E18A9DD0073EABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142379991E18A9DD0073EABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		149CD4E41E18ADE000DE258B /* Mapbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapbox.swift; sourceTree = "<group>"; };
+		14893C8D1E1D3AB3006001D3 /* Mapbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapbox.swift; path = Mapbox/Mapbox.swift; sourceTree = "<group>"; };
+		14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxViewController.swift; path = Mapbox/MapboxViewController.swift; sourceTree = "<group>"; };
 		36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMX.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSMX/Pods-OSMX.release.xcconfig"; sourceTree = "<group>"; };
+		4C2148841E1CC36700DCD68B /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		4C2148861E1CCE7C00DCD68B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2BFD24FA90FFDB1B0D78054 /* Pods-OSMX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSMX/Pods-OSMX.debug.xcconfig"; sourceTree = "<group>"; };
 		FA630DCAF813C554B8FD57A2 /* Pods_OSMX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,14 +68,32 @@
 			isa = PBXGroup;
 			children = (
 				1423798B1E18A9DD0073EABA /* AppDelegate.swift */,
+				4C2148861E1CCE7C00DCD68B /* Constants.swift */,
 				142379911E18A9DD0073EABA /* Main.storyboard */,
-				149CD4E41E18ADE000DE258B /* Mapbox.swift */,
-				1423798D1E18A9DD0073EABA /* MapboxViewController.swift */,
+				4C2148831E1CC35400DCD68B /* MapKit */,
+				14893C8C1E1D3A9E006001D3 /* Mapbox */,
 				142379941E18A9DD0073EABA /* Assets.xcassets */,
 				142379961E18A9DD0073EABA /* LaunchScreen.storyboard */,
 				142379991E18A9DD0073EABA /* Info.plist */,
 			);
 			path = OSMX;
+			sourceTree = "<group>";
+		};
+		14893C8C1E1D3A9E006001D3 /* Mapbox */ = {
+			isa = PBXGroup;
+			children = (
+				14893C8D1E1D3AB3006001D3 /* Mapbox.swift */,
+				14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */,
+			);
+			name = Mapbox;
+			sourceTree = "<group>";
+		};
+		4C2148831E1CC35400DCD68B /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4C2148841E1CC36700DCD68B /* MapKitViewController.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		91E284722C7391CE3198FCE2 /* Pods */ = {
@@ -215,9 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2148871E1CCE7C00DCD68B /* Constants.swift in Sources */,
 				1423798C1E18A9DD0073EABA /* AppDelegate.swift in Sources */,
-				149CD4E51E18ADE000DE258B /* Mapbox.swift in Sources */,
-				1423798E1E18A9DD0073EABA /* MapboxViewController.swift in Sources */,
+				14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */,
+				4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */,
+				14893C8F1E1D3AB3006001D3 /* Mapbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2BFD24FA90FFDB1B0D78054 /* Pods-OSMX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;
@@ -353,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;
