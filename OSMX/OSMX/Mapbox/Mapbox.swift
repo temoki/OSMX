@@ -10,8 +10,9 @@ import Mapbox
 
 class Mapbox {
     
-    class func setup() {
-        let token = "pk.eyJ1IjoidGVtb2tpIiwiYSI6ImNpeGUzN3F5ZzAwZmkydG54cnJyOW5kMnQifQ.leKufbiDSotosa7XwjG81g"
+    static let token = // access_token
+    
+    static func setup() {
         MGLAccountManager.setAccessToken(token)
     }
     

@@ -40,13 +40,15 @@ class MapKitViewController: UIViewController, MKMapViewDelegate {
         guard let title = annotation.title else { return nil }
         guard let identifier = title else { return nil }
         
-        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
-            return annotationView
+        if let view = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            return view
         }
 
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-        annotationView.image =  UIImage(named: (identifier == Constants.Oasys21.name ? "flag" : "place"))
-        return annotationView
+        guard identifier == Constants.RootTo.name else { return nil }
+
+        let view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        view.image = UIImage(named: "destination")
+        return view
     }
     
     
@@ -65,24 +67,24 @@ class MapKitViewController: UIViewController, MKMapViewDelegate {
     private func zoom() {
         let delta = Constants.MapSetting.zoomSpanDelta
         let span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
-        mapView.region = MKCoordinateRegion(center: Constants.NagoyoTVTower.coordinate, span: span)
+        mapView.region = MKCoordinateRegion(center: Constants.RootFrom.coordinate, span: span)
     }
     
     private func annotate() {
         let source = MKPointAnnotation()
-        source.coordinate = Constants.NagoyoTVTower.coordinate
-        source.title = Constants.NagoyoTVTower.name
+        source.coordinate = Constants.RootFrom.coordinate
+        source.title = Constants.RootFrom.name
         
         let destination = MKPointAnnotation()
-        destination.coordinate = Constants.Oasys21.coordinate
-        destination.title = Constants.Oasys21.name
+        destination.coordinate = Constants.RootTo.coordinate
+        destination.title = Constants.RootTo.name
         mapView.addAnnotations([source, destination])
     }
     
     private func direct() {
         let request = MKDirectionsRequest()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: Constants.NagoyoTVTower.coordinate, addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: Constants.Oasys21.coordinate, addressDictionary: nil))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: Constants.RootFrom.coordinate, addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: Constants.RootTo.coordinate, addressDictionary: nil))
         request.requestsAlternateRoutes = true
         request.transportType = .walking
         let directions = MKDirections(request: request)
