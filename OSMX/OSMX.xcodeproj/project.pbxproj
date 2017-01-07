@@ -376,7 +376,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2BFD24FA90FFDB1B0D78054 /* Pods-OSMX.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;
@@ -392,7 +392,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;

@@ -1,15 +1,18 @@
 PODS:
   - Mapbox-iOS-SDK (3.3.7)
+  - ReachabilitySwift (3)
   - SnapKit (3.1.2)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 3.3.7)
+  - ReachabilitySwift (~> 3)
   - SnapKit (~> 3.1.2)
 
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 142301fa63a6719cbd2eacc0f9e8bf36c65930d9
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: 16e23212930d44a4b87652db37e4be4eee05477f
+PODFILE CHECKSUM: f913e6a8411643e3185877f914c3a32d4bc0b4fd
 
 COCOAPODS: 1.1.1

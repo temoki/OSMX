@@ -10,6 +10,23 @@
     </dependencies>
     <scenes>
         <!--Mapbox-->
+        <scene sceneID="T2W-TQ-BkB">
+            <objects>
+                <navigationController id="Ohd-al-OXf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapbox" image="map" selectedImage="map" id="dgR-BM-gfe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezo-Gw-nFk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="XeA-LR-p84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWH-yl-9Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="358"/>
+        </scene>
+        <!--Mapbox-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MapboxViewController" customModule="OSMX" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,11 +39,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mapbox" image="second" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Mapbox" id="Hie-3J-mMX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1io-0U-jWr">
+                            <connections>
+                                <action selector="actionWithSender:" destination="9pv-A4-QxB" id="Z5S-QX-Ust"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="375"/>
+            <point key="canvasLocation" x="1638" y="358"/>
         </scene>
         <!--MapKit-->
         <scene sceneID="EZF-9a-yb0">
@@ -41,11 +64,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MapKit" image="first" id="4Mi-RA-5cc"/>
+                    <navigationItem key="navigationItem" title="MapKit" id="DY3-Xq-Zv6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zb-I3-g6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="-356"/>
+            <point key="canvasLocation" x="1638" y="-355"/>
+        </scene>
+        <!--MapKit-->
+        <scene sceneID="rkV-FS-cbe">
+            <objects>
+                <navigationController id="SpP-li-6Tb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MapKit" image="map" selectedImage="map" id="tyl-Em-b0U"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Q8-nY-0Iw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NBj-et-k5f" kind="relationship" relationship="rootViewController" id="MID-k4-2VN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdX-gv-BjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-354"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -58,8 +98,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="NBj-et-k5f" kind="relationship" relationship="viewControllers" id="SJb-fx-8C5"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="OFF-OM-Sza"/>
+                        <segue destination="SpP-li-6Tb" kind="relationship" relationship="viewControllers" id="iio-Qf-POI"/>
+                        <segue destination="Ohd-al-OXf" kind="relationship" relationship="viewControllers" id="rea-kl-wWP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -68,7 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="map" width="36" height="36"/>
     </resources>
 </document>
