@@ -1,18 +1,21 @@
 PODS:
+  - GLMap (0.8.2)
   - Mapbox-iOS-SDK (3.3.7)
   - ReachabilitySwift (3)
   - SnapKit (3.1.2)
 
 DEPENDENCIES:
+  - GLMap (~> 0.8.2)
   - Mapbox-iOS-SDK (~> 3.3.7)
   - ReachabilitySwift (~> 3)
   - SnapKit (~> 3.1.2)
 
 SPEC CHECKSUMS:
+  GLMap: 2efb4e48d6a0c40aef389c527feae021d30ede71
   Mapbox-iOS-SDK: 142301fa63a6719cbd2eacc0f9e8bf36c65930d9
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: f913e6a8411643e3185877f914c3a32d4bc0b4fd
+PODFILE CHECKSUM: 67c973e1bf6b1bc34710788dd823dadc6f0352d8
 
 COCOAPODS: 1.1.1

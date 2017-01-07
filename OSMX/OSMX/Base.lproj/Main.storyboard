@@ -26,6 +26,42 @@
             </objects>
             <point key="canvasLocation" x="878" y="358"/>
         </scene>
+        <!--GetYourMap-->
+        <scene sceneID="ZuA-rY-W8V">
+            <objects>
+                <navigationController id="YRM-6d-Uo9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="GetYourMap" image="map" selectedImage="map" id="fNQ-K9-2Yk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cYL-4D-40m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T5U-gQ-1Av" kind="relationship" relationship="rootViewController" id="xiW-4H-FlH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxi-zN-d9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1080"/>
+        </scene>
+        <!--Get Your Map-->
+        <scene sceneID="Z2y-tY-vyC">
+            <objects>
+                <viewController id="T5U-gQ-1Av" customClass="GetYourMapViewController" customModule="OSMX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jx0-L2-1Mf"/>
+                        <viewControllerLayoutGuide type="bottom" id="LMf-rS-Duq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sjP-oL-L7t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Get Your Map" id="gqs-Gq-EsJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqp-kT-X0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="1080"/>
+        </scene>
         <!--Mapbox-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -85,7 +121,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdX-gv-BjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="-354"/>
+            <point key="canvasLocation" x="878" y="-356"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -100,14 +136,15 @@
                     <connections>
                         <segue destination="SpP-li-6Tb" kind="relationship" relationship="viewControllers" id="iio-Qf-POI"/>
                         <segue destination="Ohd-al-OXf" kind="relationship" relationship="viewControllers" id="rea-kl-wWP"/>
+                        <segue destination="YRM-6d-Uo9" kind="relationship" relationship="viewControllers" id="4y9-Wj-wdH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-980" y="-356"/>
         </scene>
     </scenes>
     <resources>
-        <image name="map" width="36" height="36"/>
+        <image name="map" width="30" height="30"/>
     </resources>
 </document>

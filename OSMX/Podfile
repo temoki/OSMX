@@ -6,5 +6,6 @@ target 'OSMX' do
   pod 'ReachabilitySwift', '~> 3'
   pod 'SnapKit', '~> 3.1.2'
   pod 'Mapbox-iOS-SDK', '~> 3.3.7'
+  pod 'GLMap', '~> 0.8.2'
 
 end
