@@ -67,7 +67,7 @@ class MapboxViewController: UIViewController, MGLMapViewDelegate {
     
     private func setup() {
         guard mapView == nil else { return }
-        let styleURL = MGLStyle.lightStyleURL(withVersion: 9)
+        let styleURL = MGLStyle.streetsStyleURL(withVersion: 9)
         mapView = MGLMapView(frame: view.bounds, styleURL: styleURL)
         view.addSubview(mapView)
         mapView.snp.makeConstraints { $0.edges.equalTo(self.view) }

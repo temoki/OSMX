@@ -32,7 +32,7 @@ class MapboxDirections {
         requestURLString += "/" + "\(source.longitude),\(source.latitude)"
         requestURLString += ";" + "\(destination.longitude),\(destination.latitude)"
         requestURLString += "?" + "steps=true"
-        requestURLString += "&" + "access_token=" + Mapbox.token
+        requestURLString += "&" + "access_token=" + MGLAccountManager.accessToken()!
         guard let URL = URL(string: requestURLString) else {
             DispatchQueue.main.async { completion([]) }
             return

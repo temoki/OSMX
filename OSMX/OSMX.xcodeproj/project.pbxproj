@@ -11,7 +11,6 @@
 		142379931E18A9DD0073EABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379911E18A9DD0073EABA /* Main.storyboard */; };
 		142379951E18A9DD0073EABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142379941E18A9DD0073EABA /* Assets.xcassets */; };
 		142379981E18A9DD0073EABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379961E18A9DD0073EABA /* LaunchScreen.storyboard */; };
-		14893C8F1E1D3AB3006001D3 /* Mapbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8D1E1D3AB3006001D3 /* Mapbox.swift */; };
 		14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */; };
 		14B589BF1E1FD34800A0EF38 /* MapboxDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */; };
 		4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148841E1CC36700DCD68B /* MapKitViewController.swift */; };
@@ -26,7 +25,6 @@
 		142379941E18A9DD0073EABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		142379971E18A9DD0073EABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142379991E18A9DD0073EABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14893C8D1E1D3AB3006001D3 /* Mapbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapbox.swift; path = Mapbox/Mapbox.swift; sourceTree = "<group>"; };
 		14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxViewController.swift; path = Mapbox/MapboxViewController.swift; sourceTree = "<group>"; };
 		14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxDirections.swift; path = Mapbox/MapboxDirections.swift; sourceTree = "<group>"; };
 		36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMX.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSMX/Pods-OSMX.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 		14893C8C1E1D3A9E006001D3 /* Mapbox */ = {
 			isa = PBXGroup;
 			children = (
-				14893C8D1E1D3AB3006001D3 /* Mapbox.swift */,
 				14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */,
 				14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */,
 			);
@@ -129,6 +126,7 @@
 				142379861E18A9DD0073EABA /* Resources */,
 				973F5AAEF0E46A6E0BF488D6 /* [CP] Embed Pods Frameworks */,
 				960DB6B18BAE3829BE105E5B /* [CP] Copy Pods Resources */,
+				14D1AB121E20B32000400E9E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,6 +186,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14D1AB121E20B32000400E9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "token_file=${PROJECT_DIR}/.mapbox\ntoken=\"$(cat $token_file)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'error: Missing Mapbox access token'\n  open 'https://www.mapbox.com/studio/account/tokens/'\n  echo \"error: Get an access token from <https://www.mapbox.com/studio/account/tokens/>, then create a new file at $token_file that contains the access token.\"\n  exit 1\nfi";
+		};
 		1AFEEB711C527412EB1AE125 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,7 +256,6 @@
 				14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */,
 				4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */,
 				14B589BF1E1FD34800A0EF38 /* MapboxDirections.swift in Sources */,
-				14893C8F1E1D3AB3006001D3 /* Mapbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
