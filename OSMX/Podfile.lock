@@ -1,18 +1,21 @@
 PODS:
+  - CartoMobileSDK (4.0.0)
   - Mapbox-iOS-SDK (3.4.1)
   - ReachabilitySwift (3)
   - SnapKit (3.1.2)
 
 DEPENDENCIES:
+  - CartoMobileSDK (~> 4.0.0)
   - Mapbox-iOS-SDK (~> 3.4.0)
   - ReachabilitySwift (~> 3)
   - SnapKit (~> 3.1.0)
 
 SPEC CHECKSUMS:
+  CartoMobileSDK: 56cddd7c1e56433a9fc55e1a132a696e77ac5a9f
   Mapbox-iOS-SDK: 9c0d23e9a3784e6c9e45af4339898e4598b5b09b
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: cba1b61b35368fc1e5e36ab59bf97dbc32ffb549
+PODFILE CHECKSUM: 557c65d6aecffc238e441832ee978e4689b0b916
 
 COCOAPODS: 1.1.1

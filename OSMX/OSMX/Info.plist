@@ -46,5 +46,7 @@
 	</array>
 	<key>MGLMapboxAccessToken</key>
 	<string></string>
+	<key>CartoApiKey</key>
+	<string></string>
 </dict>
 </plist>

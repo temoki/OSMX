@@ -11,8 +11,10 @@
 		142379931E18A9DD0073EABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379911E18A9DD0073EABA /* Main.storyboard */; };
 		142379951E18A9DD0073EABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142379941E18A9DD0073EABA /* Assets.xcassets */; };
 		142379981E18A9DD0073EABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379961E18A9DD0073EABA /* LaunchScreen.storyboard */; };
+		1486D9FA1E40D2DB0025E005 /* Carto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486D9F91E40D2DB0025E005 /* Carto.swift */; };
 		14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */; };
 		14B589BF1E1FD34800A0EF38 /* MapboxDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */; };
+		14B8477C1E40D4C400F32D22 /* CartoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B8477B1E40D4C400F32D22 /* CartoViewController.swift */; };
 		4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148841E1CC36700DCD68B /* MapKitViewController.swift */; };
 		4C2148871E1CCE7C00DCD68B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148861E1CCE7C00DCD68B /* Constants.swift */; };
 		65FB831858B6A68910224AA4 /* Pods_OSMX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA630DCAF813C554B8FD57A2 /* Pods_OSMX.framework */; };
@@ -25,8 +27,11 @@
 		142379941E18A9DD0073EABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		142379971E18A9DD0073EABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142379991E18A9DD0073EABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1486D9F91E40D2DB0025E005 /* Carto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Carto.swift; path = Carto/Carto.swift; sourceTree = "<group>"; };
 		14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxViewController.swift; path = Mapbox/MapboxViewController.swift; sourceTree = "<group>"; };
 		14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxDirections.swift; path = Mapbox/MapboxDirections.swift; sourceTree = "<group>"; };
+		14B847781E40D3A800F32D22 /* OSMX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSMX-Bridging-Header.h"; sourceTree = "<group>"; };
+		14B8477B1E40D4C400F32D22 /* CartoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartoViewController.swift; path = Carto/CartoViewController.swift; sourceTree = "<group>"; };
 		36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMX.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSMX/Pods-OSMX.release.xcconfig"; sourceTree = "<group>"; };
 		4C2148841E1CC36700DCD68B /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		4C2148861E1CCE7C00DCD68B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 				142379891E18A9DD0073EABA /* Products */,
 				91E284722C7391CE3198FCE2 /* Pods */,
 				F3F65E859E589ABC4EA8BB4B /* Frameworks */,
+				14B847781E40D3A800F32D22 /* OSMX-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,11 +78,21 @@
 				142379911E18A9DD0073EABA /* Main.storyboard */,
 				4C2148831E1CC35400DCD68B /* MapKit */,
 				14893C8C1E1D3A9E006001D3 /* Mapbox */,
+				1486D9F81E40D2BF0025E005 /* Carto */,
 				142379941E18A9DD0073EABA /* Assets.xcassets */,
 				142379961E18A9DD0073EABA /* LaunchScreen.storyboard */,
 				142379991E18A9DD0073EABA /* Info.plist */,
 			);
 			path = OSMX;
+			sourceTree = "<group>";
+		};
+		1486D9F81E40D2BF0025E005 /* Carto */ = {
+			isa = PBXGroup;
+			children = (
+				1486D9F91E40D2DB0025E005 /* Carto.swift */,
+				14B8477B1E40D4C400F32D22 /* CartoViewController.swift */,
+			);
+			name = Carto;
 			sourceTree = "<group>";
 		};
 		14893C8C1E1D3A9E006001D3 /* Mapbox */ = {
@@ -126,7 +142,8 @@
 				142379861E18A9DD0073EABA /* Resources */,
 				973F5AAEF0E46A6E0BF488D6 /* [CP] Embed Pods Frameworks */,
 				960DB6B18BAE3829BE105E5B /* [CP] Copy Pods Resources */,
-				14D1AB121E20B32000400E9E /* ShellScript */,
+				14D1AB121E20B32000400E9E /* Run Script */,
+				1486D9F71E40D23A0025E005 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -150,6 +167,7 @@
 					142379871E18A9DD0073EABA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9926FMFE8C;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -186,7 +204,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14D1AB121E20B32000400E9E /* ShellScript */ = {
+		1486D9F71E40D23A0025E005 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,7 +215,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Mapbox\ntoken_file=${PROJECT_DIR}/.mapbox\ntoken=\"$(cat $token_file)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'error: Missing Mapbox access token'\n  exit 1\nfi";
+			shellScript = "# Carto\ntoken_file=${PROJECT_DIR}/.carto\ntoken=\"$(cat $token_file)\"\nif [ \"$token\" ]; then\nplutil -replace CartoApiKey -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\necho 'error: Missing Carto api key (.carto)'\nexit 1\nfi";
+		};
+		14D1AB121E20B32000400E9E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Mapbox\ntoken_file=${PROJECT_DIR}/.mapbox\ntoken=\"$(cat $token_file)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'error: Missing Mapbox access token (.mapbox)'\n  exit 1\nfi";
 		};
 		1AFEEB711C527412EB1AE125 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -251,7 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B8477C1E40D4C400F32D22 /* CartoViewController.swift in Sources */,
 				4C2148871E1CCE7C00DCD68B /* Constants.swift in Sources */,
+				1486D9FA1E40D2DB0025E005 /* Carto.swift in Sources */,
 				1423798C1E18A9DD0073EABA /* AppDelegate.swift in Sources */,
 				14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */,
 				4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */,
@@ -378,12 +412,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.temoki.OSMX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OSMX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -394,12 +431,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9926FMFE8C;
 				INFOPLIST_FILE = OSMX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.temoki.OSMX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OSMX-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

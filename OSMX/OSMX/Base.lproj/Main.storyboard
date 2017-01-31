@@ -46,7 +46,7 @@
         <!--Carto-->
         <scene sceneID="Z2y-tY-vyC">
             <objects>
-                <viewController id="T5U-gQ-1Av" sceneMemberID="viewController">
+                <viewController id="T5U-gQ-1Av" customClass="CartoViewController" customModule="OSMX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jx0-L2-1Mf"/>
                         <viewControllerLayoutGuide type="bottom" id="LMf-rS-Duq"/>
