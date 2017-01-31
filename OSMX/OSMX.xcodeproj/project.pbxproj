@@ -13,8 +13,6 @@
 		142379981E18A9DD0073EABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142379961E18A9DD0073EABA /* LaunchScreen.storyboard */; };
 		14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */; };
 		14B589BF1E1FD34800A0EF38 /* MapboxDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */; };
-		14D1AB151E20C99500400E9E /* GetYourMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1AB141E20C99500400E9E /* GetYourMapViewController.swift */; };
-		14D1AB171E20C9D200400E9E /* GetYourMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1AB161E20C9D200400E9E /* GetYourMap.swift */; };
 		4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148841E1CC36700DCD68B /* MapKitViewController.swift */; };
 		4C2148871E1CCE7C00DCD68B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2148861E1CCE7C00DCD68B /* Constants.swift */; };
 		65FB831858B6A68910224AA4 /* Pods_OSMX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA630DCAF813C554B8FD57A2 /* Pods_OSMX.framework */; };
@@ -29,8 +27,6 @@
 		142379991E18A9DD0073EABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxViewController.swift; path = Mapbox/MapboxViewController.swift; sourceTree = "<group>"; };
 		14B589BE1E1FD34800A0EF38 /* MapboxDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapboxDirections.swift; path = Mapbox/MapboxDirections.swift; sourceTree = "<group>"; };
-		14D1AB141E20C99500400E9E /* GetYourMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetYourMapViewController.swift; path = GetYourMap/GetYourMapViewController.swift; sourceTree = "<group>"; };
-		14D1AB161E20C9D200400E9E /* GetYourMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetYourMap.swift; path = GetYourMap/GetYourMap.swift; sourceTree = "<group>"; };
 		36CC86D2BA027AC3101B4EC5 /* Pods-OSMX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMX.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSMX/Pods-OSMX.release.xcconfig"; sourceTree = "<group>"; };
 		4C2148841E1CC36700DCD68B /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		4C2148861E1CCE7C00DCD68B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -76,7 +72,6 @@
 				142379911E18A9DD0073EABA /* Main.storyboard */,
 				4C2148831E1CC35400DCD68B /* MapKit */,
 				14893C8C1E1D3A9E006001D3 /* Mapbox */,
-				14D1AB131E20C96800400E9E /* GetYourMap */,
 				142379941E18A9DD0073EABA /* Assets.xcassets */,
 				142379961E18A9DD0073EABA /* LaunchScreen.storyboard */,
 				142379991E18A9DD0073EABA /* Info.plist */,
@@ -91,15 +86,6 @@
 				14893C8E1E1D3AB3006001D3 /* MapboxViewController.swift */,
 			);
 			name = Mapbox;
-			sourceTree = "<group>";
-		};
-		14D1AB131E20C96800400E9E /* GetYourMap */ = {
-			isa = PBXGroup;
-			children = (
-				14D1AB161E20C9D200400E9E /* GetYourMap.swift */,
-				14D1AB141E20C99500400E9E /* GetYourMapViewController.swift */,
-			);
-			name = GetYourMap;
 			sourceTree = "<group>";
 		};
 		4C2148831E1CC35400DCD68B /* MapKit */ = {
@@ -141,7 +127,6 @@
 				973F5AAEF0E46A6E0BF488D6 /* [CP] Embed Pods Frameworks */,
 				960DB6B18BAE3829BE105E5B /* [CP] Copy Pods Resources */,
 				14D1AB121E20B32000400E9E /* ShellScript */,
-				14D1AB181E20CC4200400E9E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,19 +199,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Mapbox\ntoken_file=${PROJECT_DIR}/.mapbox\ntoken=\"$(cat $token_file)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'error: Missing Mapbox access token'\n  exit 1\nfi";
 		};
-		14D1AB181E20CC4200400E9E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# GetYourMap\napikey_file=${PROJECT_DIR}/.getyourmap\napikey=\"$(cat $apikey_file)\"\nif [ \"$apikey\" ]; then\n  plutil -replace GetYourMapAPIKey -string $apikey \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'error: Missing GetYourMap API key'\n  exit 1\nfi";
-		};
 		1AFEEB711C527412EB1AE125 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,9 +255,7 @@
 				1423798C1E18A9DD0073EABA /* AppDelegate.swift in Sources */,
 				14893C901E1D3AB3006001D3 /* MapboxViewController.swift in Sources */,
 				4C2148851E1CC36700DCD68B /* MapKitViewController.swift in Sources */,
-				14D1AB171E20C9D200400E9E /* GetYourMap.swift in Sources */,
 				14B589BF1E1FD34800A0EF38 /* MapboxDirections.swift in Sources */,
-				14D1AB151E20C99500400E9E /* GetYourMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

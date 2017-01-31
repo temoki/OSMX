@@ -205,7 +205,7 @@ class MapboxViewController: UIViewController, MGLMapViewDelegate {
     func offlinePackDidReceiveError(notification: NSNotification) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
 
-        if let e = notification.userInfo?[MGLOfflinePackErrorUserInfoKey] as? Error {
+        if let e = notification.userInfo?[MGLOfflinePackUserInfoKey.error] as? Error {
             showAlertDialog(title: "Error", message: e.localizedDescription)
         }
     }
@@ -213,7 +213,7 @@ class MapboxViewController: UIViewController, MGLMapViewDelegate {
     func offlinePackDidReceiveMaximumAllowedMapboxTiles(notification: NSNotification) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
-        if let maximumCount = notification.userInfo?[MGLOfflinePackMaximumCountUserInfoKey] as? UInt64 {
+        if let maximumCount = notification.userInfo?[MGLOfflinePackUserInfoKey.maximumCount] as? UInt64 {
             showAlertDialog(title: "Error", message: "reached limit of \(maximumCount) tiles.")
         }
     }
