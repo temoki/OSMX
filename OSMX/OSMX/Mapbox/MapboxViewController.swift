@@ -40,12 +40,13 @@ class MapboxViewController: UIViewController, MGLMapViewDelegate {
     }
     
     private func downloadOfflinePack() {
+        /*
         guard let reachability = Reachability.init(), reachability.isReachableViaWiFi else {
             showAlertDialog(title: "WiFi is not available."); return
         }
         guard MGLOfflineStorage.shared().packs?.first == nil else {
             showAlertDialog(title: "Offline pack is already downloaded."); return
-        }
+        }*/
         startOfflinePackDownload()
     }
     
@@ -137,19 +138,18 @@ class MapboxViewController: UIViewController, MGLMapViewDelegate {
             self?.mapView.addAnnotation(polyline)
         }
     }
-
+/*35.520319, 139.429232
+ 
+ 35.423577, 139.481246*/
     func startOfflinePackDownload() {
-        let center = Constants.RootFrom.coordinate
-        let regionDelta = Constants.OfflineMapSetting.regionDelta
-        let levelRange = Constants.OfflineMapSetting.zoomLevelRange
-        let sw = CLLocationCoordinate2D(latitude: center.latitude - regionDelta, longitude: center.longitude - regionDelta)
-        let ne = CLLocationCoordinate2D(latitude: center.latitude + regionDelta, longitude: center.longitude + regionDelta)
+        let sw = CLLocationCoordinate2D(latitude: 35.423577, longitude: 139.429232)
+        let ne = CLLocationCoordinate2D(latitude: 35.520319, longitude: 139.481246)
         let bounds = MGLCoordinateBounds(sw: sw, ne: ne)
         print(bounds)
         let region = MGLTilePyramidOfflineRegion(styleURL: mapView.styleURL, bounds: bounds,
-                                                 fromZoomLevel: levelRange.min, toZoomLevel: levelRange.max)
+                                                 fromZoomLevel: 0, toZoomLevel: 20)
         
-        let userInfo = ["name": "Mapbox Offline Pack"]
+        let userInfo = ["name": "Mapbox Offline Pack_ymt"]
         let context = NSKeyedArchiver.archivedData(withRootObject: userInfo)
         
         MGLOfflineStorage.shared().addPack(for: region, withContext: context) { [weak self] pack, error in

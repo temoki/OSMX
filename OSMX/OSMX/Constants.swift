@@ -17,7 +17,7 @@ struct Constants {
     }
     
     struct OfflineMapSetting {
-        static let zoomLevelRange = (min: 0.0, max: 15.0)
+        static let zoomLevelRange = (min: 0.0, max: 20.0)
         static let regionDelta = 0.04
     }
     
